@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillFacts - A Nutrition Facts label for agent skills</title>
+  <meta name="description" content="SKILL_FACTS.md: a tiny, machine-parseable label for what an agent skill will teach an agent to do. Reserved in the xFacts family; coming after ToolFacts and AgentFacts." />
+  <link rel="canonical" href="https://skillfacts.dev/" />
+  <meta property="og:title" content="SkillFacts" />
+  <meta property="og:description" content="Know what it will teach before you install it. Reserved - coming after ToolFacts and AgentFacts." />
+  <meta property="og:url" content="https://skillfacts.dev/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #101418;
+      --paper: #f8fafc;
+      --slate: #1a222c;
+      --slate-2: #243040;
+      --mute: #9aa8b8;
+      --accent: #f472b6;
+      --accent-soft: #f9a8d4;
+      --font-display: "Sora", sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+      --max: 68rem;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--paper);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(244, 114, 182, 0.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(80, 120, 160, 0.14), transparent 50%),
+        linear-gradient(180deg, #0c1015 0%, var(--ink) 40%, #0a0e13 100%);
+      font-family: var(--font-mono);
+      font-size: 15px;
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent-soft); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: #fff; }
+
+    .wrap {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.25rem 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 80% 55% at 50% 0%, black, transparent);
+      pointer-events: none;
+    }
+
+    .hero-copy {
+      position: relative;
+      padding-bottom: 1.75rem;
+      animation: fadeup 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      border: 1px solid rgba(244, 114, 182, 0.45);
+      padding: 0.35rem 0.65rem;
+      margin: 0 0 1.1rem;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .lede {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+      line-height: 1.35;
+      color: #e8eef5;
+      max-width: 32ch;
+      margin: 0 0 0.85rem;
+    }
+
+    .sub {
+      color: var(--mute);
+      max-width: 48ch;
+      margin: 0 0 1.75rem;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid transparent;
+      font: 600 0.85rem/1 var(--font-mono);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); color: #fff; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+    }
+    .btn-primary:hover { background: #f9a8d4; color: #111; }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(255,255,255,0.22);
+      color: var(--paper);
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); }
+
+    .label-plane {
+      position: relative;
+      width: 100%;
+      margin-top: auto;
+      background: var(--paper);
+      color: var(--ink);
+      border-top: 4px solid var(--ink);
+      box-shadow: 0 -30px 80px rgba(0, 0, 0, 0.35);
+      animation: rise 750ms 80ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .label-plane-inner {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+      padding: 1.1rem 0 1.35rem;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .label-plane h2 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      margin: 0;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .label-plane .serving {
+      font-size: 0.75rem;
+      border-bottom: 10px solid var(--ink);
+      padding: 0.4rem 0 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .label-cols {
+      display: grid;
+      gap: 0.25rem 2rem;
+    }
+
+    @media (min-width: 720px) {
+      .label-cols { grid-template-columns: 1fr 1fr; }
+    }
+
+    .label-plane .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-bottom: 1px solid var(--ink);
+      padding: 0.32rem 0;
+      font-size: 0.8rem;
+    }
+
+    .label-plane .row.thick { border-bottom-width: 5px; }
+    .label-plane .row strong { font-weight: 600; }
+
+    .label-plane .note {
+      margin-top: 0.65rem;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      color: #44505c;
+      grid-column: 1 / -1;
+    }
+
+    @keyframes fadeup {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    section {
+      padding: 3.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 0.6rem;
+      color: #fff;
+    }
+
+    .section-lead {
+      color: var(--mute);
+      max-width: 52ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .prose p { margin: 0 0 1rem; color: #c9d3de; max-width: 62ch; }
+    .prose strong { color: #fff; font-weight: 600; }
+
+    .family {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .family li {
+      color: #d5dde6;
+      font-size: 0.9rem;
+    }
+
+    .family a { font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(249, 168, 212, 0.4); }
+    .family a:hover { border-bottom-color: #fff; }
+    .family .here { color: var(--accent-soft); }
+
+    footer {
+      padding: 2rem 0 2.75rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--mute);
+      font-size: 0.8rem;
+    }
+
+    footer .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-copy">
+      <p class="status">Reserved - coming after ToolFacts and AgentFacts</p>
+      <h1 class="brand">Skill<span>Facts</span></h1>
+      <p class="lede">Know what it will teach before you install it.</p>
+      <p class="sub">
+        A tiny <code>SKILL_FACTS.md</code> for the playbook layer: what an installable
+        skill will teach an agent to do, and what reach those instructions imply.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://xfacts.dev">Visit the xFacts hub</a>
+        <a class="btn btn-ghost" href="https://www.catalystforge.com/">Catalyst Forge</a>
+      </div>
+    </div>
+
+    <div class="label-plane" aria-label="SkillFacts reserved label preview">
+      <div class="label-plane-inner">
+        <h2>Skill Facts</h2>
+        <div class="serving">Serving size: one skill · Status: reserved</div>
+        <div class="label-cols">
+          <div class="row thick"><strong>Layer</strong><span>Playbook</span></div>
+          <div class="row thick"><strong>File</strong><span>SKILL_FACTS.md</span></div>
+          <div class="row"><strong>Answers</strong><span>What will this teach my agent to do?</span></div>
+          <div class="row"><strong>Accent</strong><span>#f472b6</span></div>
+          <div class="row thick"><strong>Build order</strong><span>After ToolFacts + AgentFacts</span></div>
+          <div class="row thick"><strong>Spec</strong><span>not started</span></div>
+          <div class="note">
+            Stub only. Facts will come from parsing <code>SKILL.md</code> and bundled scripts -
+            shell, network, filesystem reach, tools referenced, egress.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="family">
+      <div class="wrap prose">
+        <h2 class="section-title">Part of xFacts</h2>
+        <p class="section-lead">
+          One nutrition label per layer of the AI stack. SkillFacts is reserved for
+          family completeness; the full validator and generator wait until the toolbelt
+          and hands labels ship.
+        </p>
+        <ul class="family">
+          <li><a href="https://xfacts.dev">xfacts.dev</a> - family hub</li>
+          <li><a href="https://appfacts.dev">AppFacts</a> - Body</li>
+          <li><a href="https://modelfacts.dev">ModelFacts</a> - Brain</li>
+          <li><a href="https://toolfacts.dev">ToolFacts</a> - Toolbelt</li>
+          <li><a href="https://agentfacts.dev">AgentFacts</a> - Hands</li>
+          <li><span class="here">SkillFacts</span> - Playbook (you are here)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="boundary">
+      <div class="wrap prose">
+        <h2 class="section-title">The boundary</h2>
+        <p>
+          <strong>ToolFacts</strong> labels an executable instrument.
+          <strong>SkillFacts</strong> labels instructions an agent follows.
+          <strong>AgentFacts</strong> labels an actor configuration.
+        </p>
+        <p>
+          Skills are the plain-English supply chain: installable playbooks that can
+          tell an agent to run scripts, fetch URLs, or move data. Nothing today puts
+          a comparable label on that surface.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <div>© 2026 SkillFacts · by <a href="https://www.catalystforge.com/">Catalyst Forge</a></div>
+      <div>
+        <a href="https://xfacts.dev">xfacts.dev</a>
+        ·
+        <a href="https://appfacts.dev">AppFacts</a>
+        ·
+        <a href="https://modelfacts.dev">ModelFacts</a>
+        ·
+        <a href="https://toolfacts.dev">ToolFacts</a>
+        ·
+        <a href="https://agentfacts.dev">AgentFacts</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
