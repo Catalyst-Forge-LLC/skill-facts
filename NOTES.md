@@ -1,51 +1,35 @@
 # Project Notes - SkillFacts
 
-> Working notes for maintainers/agents picking up this project. Not published to the site.
-> Last updated: 2026-08-03 (bootstrap / reserved stub).
+> Working notes for maintainers/agents. Not published to the site.
+> Last updated: 2026-08-07 (v0.1 formalization session).
 
 ## What this is
 
-SkillFacts (skillfacts.dev) is the **Playbook** label in the xFacts family: a
-nutrition label for installable agent skills (`SKILL.md` and kin). It answers
-*"What will this teach my agent to do?"*
+SkillFacts labels the **playbook**: installable agent skills. Tagline:
+*"Know what it will teach before you install it."*
 
-Domain reserved 2026-07-31. Suite vision:
-`catalyst-forge/docs/xfacts-suite-vision.md`.
+GENESIS deferred full build; owner asked to formalize v0.1 now. Generator still
+deferred until ToolFacts scanner reuse is real.
 
-## State as of 2026-08-03
+Session plan: [`specs/REVIEW-AND-PLAN.md`](./specs/REVIEW-AND-PLAN.md).
 
-Bootstrap only. Intentionally lighter than ToolFacts / AgentFacts genesis repos.
+## State as of 2026-08-07
 
-| Piece | Where | Status |
-|---|---|---|
-| Genesis bootstrap | `GENESIS.md` | Done. Draft taxonomy, boundaries, open decisions. |
-| README | `README.md` | Short stub. |
-| Stub site | `site/index.html` | Reserved landing; accent `#f472b6`. |
-| SPEC / schema / validator / generator | - | **Not started.** Do not build until ToolFacts and AgentFacts ship. |
-
-Remote: not configured in this bootstrap. GitHub org target
-`Catalyst-Forge-LLC/skill-facts` (owner creates and pushes). **Never push without
-explicit ask.**
-
-## Why we stop here
-
-Admission is yes-later (vision doc): facts are machine-derivable from skill text
-and bundled scripts, but the suite must not carry three unbuilt specs at once.
-ToolFacts scanner work is the natural foundation; SkillFacts reuses it.
-
-## Boundaries (keep crisp)
-
-- **ToolFacts** = executable instrument (side effects when invoked).
-- **SkillFacts** = instructions an agent follows (teaching surface + implied reach).
-- **AgentFacts** = actor configuration (leash, permissions, model binding).
+| Piece | Status |
+|---|---|
+| SPEC v0.1.0 | Done |
+| Schema + validator | Done; exemplars + template validate |
+| Exemplars (4) | docs-writer / repo-setup / web-research / secure-review |
+| Site | Full landing (not reserved stub) |
+| `llms.txt` + examples index | Done |
+| Generator | Plan only |
 
 ## Accent
 
-Suggested rose/pink `#f472b6`. Confirm later against the shared family footer.
+Rose `#f472b6` / soft `#f9a8d4`.
 
-## Next (when ToolFacts + AgentFacts are live)
+## Next
 
-1. Formalize `SPEC.md` + JSON Schema from the draft taxonomy in GENESIS.
-2. Worked example + template.
-3. Validator, then generator (parse `SKILL.md` + scan bundled scripts).
-4. Deploy stub → real site; update xfacts.dev and sibling footers.
+1. Generator: parse skill text + scan bundled scripts.
+2. Owner: GitHub remote + Pages + DNS.
+3. Directory when marketplace comparison pressure appears.

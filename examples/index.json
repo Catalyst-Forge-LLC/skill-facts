@@ -1,0 +1,49 @@
+{
+  "label": "skill-facts",
+  "version": "0.1.0",
+  "updated": "2026-08-07",
+  "schema": "https://skillfacts.dev/schema/skill-facts.schema.json",
+  "note": "Curated exemplars for format teaching. Illustrative skills are not marketplace certificates.",
+  "exemplars": [
+    {
+      "slug": "docs-writer",
+      "name": "Docs Writer",
+      "kind": "cursor-skill",
+      "shell": "none",
+      "network": "none",
+      "filesystem": "read",
+      "bundled_artifacts": 0,
+      "path": "docs-writer/SKILL_FACTS.md"
+    },
+    {
+      "slug": "repo-setup",
+      "name": "Repo Setup",
+      "kind": "claude-skill",
+      "shell": "explicit",
+      "network": "explicit",
+      "filesystem": "read-write",
+      "bundled_artifacts": 2,
+      "path": "repo-setup/SKILL_FACTS.md"
+    },
+    {
+      "slug": "web-research",
+      "name": "Web Research Playbook",
+      "kind": "agents-skill",
+      "shell": "none",
+      "network": "explicit",
+      "filesystem": "read-write",
+      "bundled_artifacts": 1,
+      "path": "web-research/SKILL_FACTS.md"
+    },
+    {
+      "slug": "secure-review",
+      "name": "Secure Review",
+      "kind": "cursor-skill",
+      "shell": "implied",
+      "network": "none",
+      "filesystem": "read",
+      "bundled_artifacts": 1,
+      "path": "secure-review/SKILL_FACTS.md"
+    }
+  ]
+}

@@ -153,13 +153,15 @@ GitHub org: `Catalyst-Forge-LLC`, repo `skill-facts` (owner creates and pushes).
 
 ## Milestones
 
-1. **Now:** reserved domain, this genesis, stub site, NOTES. Stop here.
-2. After ToolFacts + AgentFacts ship: `SPEC.md` v0.1.0 + schema + template +
-   worked example.
-3. Validator CLI.
-4. Generator: skill parse + bundled script scan (+ ToolFacts reuse).
-5. Site + directory when skill marketplaces make the comparison surface useful.
-6. Family footer update across siblings.
+1. ~~**Now:** reserved domain, this genesis, stub site, NOTES. Stop here.~~
+2. ~~After ToolFacts + AgentFacts ship: `SPEC.md` v0.1.0 + schema + template +
+   worked example.~~ **Done 2026-08-07** (owner override: formalize alongside
+   ToolFacts/AgentFacts exemplar flesh-out). See `SPEC.md`, `examples/`,
+   `validator/`, upgraded `site/`.
+3. ~~Validator CLI.~~ **Done 2026-08-07.**
+4. Generator: skill parse + bundled script scan (+ ToolFacts reuse). **Still open.**
+5. Directory when skill marketplaces make the comparison surface useful.
+6. Family footer update across siblings (hub already includes SkillFacts).
 
 ## Acceptance criteria (for the eventual build)
 

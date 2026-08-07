@@ -1,0 +1,24 @@
+# SkillFacts
+
+> Nutrition-label facts for installable agent skills (playbooks). Prefer structured YAML/JSON over marketing HTML.
+
+## Primary
+
+- Exemplar catalog (JSON): https://skillfacts.dev/examples/index.json
+- Label schema: https://skillfacts.dev/schema/skill-facts.schema.json
+- Site: https://skillfacts.dev/
+- Related instruments: https://toolfacts.dev/llms.txt
+- Related actors: https://agentfacts.dev/llms.txt
+
+## How to use a skill label
+
+1. Fetch `/examples/index.json` or open `SKILL_FACTS.md` beside the skill package.
+2. Read `purpose`, `instructions_reach` (shell/network/filesystem), `tools_referenced`, `bundled_artifacts`, `egress`, `provenance`.
+3. Prefer harsher reach labels when unsure. Follow ToolFacts links for named tools.
+4. Validate frontmatter against the schema.
+
+SkillFacts labels what instructions *teach*; AgentFacts labels what the host *allows*.
+
+## Spec (git)
+
+- https://github.com/Catalyst-Forge-LLC/skill-facts/blob/main/SPEC.md
