@@ -5,6 +5,7 @@
 ## Primary
 
 - Exemplar catalog (JSON): https://skillfacts.dev/examples/index.json
+- Portable viewer: https://skillfacts.dev/v#sf1.… (human skim; flip for raw; see each exemplar `viewer` field)
 - Label schema: https://skillfacts.dev/schema/skill-facts.schema.json
 - Site: https://skillfacts.dev/
 - Related instruments: https://toolfacts.dev/llms.txt

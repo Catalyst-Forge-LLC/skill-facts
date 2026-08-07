@@ -74,9 +74,10 @@ shipped yet. See [`generator/README.md`](./generator/README.md).
 ## Roadmap
 
 - [x] Spec v0.1.0, schema, template, validator, multi-type exemplars, site, `llms.txt`
+- [x] Portable `/v#sf1.…` viewer with flip-to-raw + copy; exemplars deep-link in
 - [ ] Generator (skill parse + script scan)
 - [ ] Marketplace directory when comparison pressure appears
-- [ ] Portable badge / visual label
+- [ ] QR / badge emission from generator
 
 Bootstrap intent preserved in [`GENESIS.md`](./GENESIS.md). Session plan:
 [`specs/REVIEW-AND-PLAN.md`](./specs/REVIEW-AND-PLAN.md).
