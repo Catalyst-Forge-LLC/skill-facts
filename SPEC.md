@@ -1,4 +1,4 @@
-# SkillFacts Specification - v0.1.0
+# SkillFacts Specification - v0.1.1
 
 > *"Know what it will teach before you install it."*
 
@@ -124,12 +124,25 @@ Empty array when the skill is instructions-only.
   mean a new file.
 - Keep the body skimable in under a minute: what it teaches, implied reach, tools,
   artifacts, what leaves the machine.
+- `tools_referenced` **SHOULD** use `https://` URLs to `TOOL_FACTS.md` across package
+  boundaries (local paths OK inside one package tree).
 - **Canonical schema URL:**
   [`https://skillfacts.dev/schema/skill-facts.schema.json`](https://skillfacts.dev/schema/skill-facts.schema.json)
 
+## Publication & discovery
+
+Suite contract: [x-facts `DISCOVERY-AND-PUBLICATION.md`](../x-facts/specs/DISCOVERY-AND-PUBLICATION.md).
+
+| | |
+|---|---|
+| **Canonical file** | Skill package root `SKILL_FACTS.md` (beside `SKILL.md` / equivalent) |
+| **Primary pointer** | Marketplace listing or publish manifest; install-time: fetch before enable |
+| **Viewer** | Optional marketplace nutrition card via `/v#sf1.…` |
+| **Fallback** | `/.well-known/x-facts/skill.md` when web-hosted without a package root |
+
 ## Versioning
 
-- **This document:** v0.1.0.
+- **This document:** v0.1.1 (publication & discovery; see revision history).
 - **Files** declare `skill_facts_version` (currently `"0.1.0"`).
 - Required-field list may still change before v1.0.
 
@@ -137,6 +150,7 @@ Empty array when the skill is instructions-only.
 
 | Spec doc | Notes |
 |---|---|
+| **0.1.1** | Publication & discovery: marketplace/install pointers; URL-preferred tool refs; link to suite discovery contract. |
 | **0.1.0** | Initial specification, formalizing [`GENESIS.md`](./GENESIS.md). |
 
 ## License

@@ -34,8 +34,9 @@ GENESIS deferral overridden for scaffold; generator still waits on ToolFacts reu
 1. Deploy skillfacts.dev; hub status when live.
 2. Keep exemplars as the teaching set; add one marketplace-shaped exemplar when a
    real public skill is labeled (prefer real over illustrative).
-3. Document install-time checklist for agents: fetch SKILL_FACTS → read
-   `instructions_reach` → follow `tools_referenced`.
+3. Document install-time checklist for agents: fetch SKILL_FACTS (via marketplace
+   / package pointer) → read `instructions_reach` → follow `tools_referenced`
+   URLs — per suite [discovery contract](../../x-facts/specs/DISCOVERY-AND-PUBLICATION.md).
 
 ### Mid-term
 
