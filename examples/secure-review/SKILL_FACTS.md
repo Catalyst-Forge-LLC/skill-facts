@@ -17,7 +17,7 @@ instructions_reach:
   filesystem: read
 tools_referenced:
   - runAudit
-  - ../../tool-facts/examples/forgekit-mcp/TOOL_FACTS.md
+  - ../../tool-facts/examples/forgetrail-mcp/TOOL_FACTS.md
 bundled_artifacts:
   - path: checklists/secure-review.md
     kind: template
@@ -67,7 +67,7 @@ Teach an agent to review a workspace for common security footguns without mutati
 ## Tools referenced
 
 - runAudit
-- ToolFacts: `forgekit-mcp`
+- ToolFacts: `forgetrail-mcp`
 
 ## Bundled artifacts
 
