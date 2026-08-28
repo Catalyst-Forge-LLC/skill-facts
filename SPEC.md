@@ -1,4 +1,4 @@
-# SkillFacts Specification - v0.1.1
+# SkillFacts Specification - v0.1.2
 
 > *"Know what it will teach before you install it."*
 
@@ -139,10 +139,11 @@ Suite contract: [x-facts `DISCOVERY-AND-PUBLICATION.md`](../x-facts/specs/DISCOV
 | **Primary pointer** | Marketplace listing or publish manifest; install-time: fetch before enable |
 | **Viewer** | Optional marketplace nutrition card via `/v#sf1.…` |
 | **Fallback** | `/.well-known/x-facts/skill.md` when web-hosted without a package root |
+| **Several skills in one product** | Each skill package keeps its own file and pointer. Do not collapse a multi-skill repo into one product SkillFacts. |
 
 ## Versioning
 
-- **This document:** v0.1.1 (publication & discovery; see revision history).
+- **This document:** v0.1.2 (publication & discovery; see revision history).
 - **Files** declare `skill_facts_version` (currently `"0.1.0"`).
 - Required-field list may still change before v1.0.
 
@@ -150,6 +151,7 @@ Suite contract: [x-facts `DISCOVERY-AND-PUBLICATION.md`](../x-facts/specs/DISCOV
 
 | Spec doc | Notes |
 |---|---|
+| **0.1.2** | Multi-skill products: one file and pointer per skill package; do not collapse. |
 | **0.1.1** | Publication & discovery: marketplace/install pointers; URL-preferred tool refs; link to suite discovery contract. |
 | **0.1.0** | Initial specification, formalizing [`GENESIS.md`](./GENESIS.md). |
 

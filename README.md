@@ -46,6 +46,16 @@ about what an instrument *does when invoked*. AgentFacts is about what an actor
 Catalog: [`examples/index.json`](./examples/index.json). Template:
 [`examples/SKILL_FACTS.template.md`](./examples/SKILL_FACTS.template.md).
 
+Shelf dogfood (one row per skill package; a product may ship several):
+
+| Product | Skills |
+|---|---|
+| [forgetrail](./examples/forgetrail/SKILL_FACTS.md) | forgetrail |
+| [aibreze](./examples/aibreze/SKILL_FACTS.md) | aibreze |
+| [ember-dossier](./examples/ember-dossier/SKILL_FACTS.md) | ember-dossier |
+| Temper Pass | [clarify-first](./examples/temper-pass-clarify-first/SKILL_FACTS.md) · [red-team](./examples/temper-pass-red-team/SKILL_FACTS.md) · [scope-lock](./examples/temper-pass-scope-lock/SKILL_FACTS.md) · [tradeoff-matrix](./examples/temper-pass-tradeoff-matrix/SKILL_FACTS.md) |
+| Docupuncture | [docs](./examples/docupuncture-docs/SKILL_FACTS.md) · [sheets](./examples/docupuncture-sheets/SKILL_FACTS.md) · [slides](./examples/docupuncture-slides/SKILL_FACTS.md) |
+
 ## Fact groups
 
 | Group | Answers |
