@@ -12,7 +12,7 @@ Teaching set above. Shelf dogfood is one exemplar per skill package — a produc
 | Product | Skills |
 |---|---|
 | [forgetrail](./forgetrail/SKILL_FACTS.md) | forgetrail |
-| [aibreze](./aibreze/SKILL_FACTS.md) | aibreze |
+| [smellcheck](./smellcheck/SKILL_FACTS.md) | smellcheck |
 | [ember-dossier](./ember-dossier/SKILL_FACTS.md) | ember-dossier |
 | Temper Pass | [clarify-first](./temper-pass-clarify-first/SKILL_FACTS.md) · [red-team](./temper-pass-red-team/SKILL_FACTS.md) · [scope-lock](./temper-pass-scope-lock/SKILL_FACTS.md) · [tradeoff-matrix](./temper-pass-tradeoff-matrix/SKILL_FACTS.md) |
 | Docupuncture | [docs](./docupuncture-docs/SKILL_FACTS.md) · [sheets](./docupuncture-sheets/SKILL_FACTS.md) · [slides](./docupuncture-slides/SKILL_FACTS.md) |

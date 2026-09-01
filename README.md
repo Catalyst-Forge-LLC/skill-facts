@@ -51,7 +51,7 @@ Shelf dogfood (one row per skill package; a product may ship several):
 | Product | Skills |
 |---|---|
 | [forgetrail](./examples/forgetrail/SKILL_FACTS.md) | forgetrail |
-| [aibreze](./examples/aibreze/SKILL_FACTS.md) | aibreze |
+| [smellcheck](./examples/smellcheck/SKILL_FACTS.md) | smellcheck |
 | [ember-dossier](./examples/ember-dossier/SKILL_FACTS.md) | ember-dossier |
 | Temper Pass | [clarify-first](./examples/temper-pass-clarify-first/SKILL_FACTS.md) · [red-team](./examples/temper-pass-red-team/SKILL_FACTS.md) · [scope-lock](./examples/temper-pass-scope-lock/SKILL_FACTS.md) · [tradeoff-matrix](./examples/temper-pass-tradeoff-matrix/SKILL_FACTS.md) |
 | Docupuncture | [docs](./examples/docupuncture-docs/SKILL_FACTS.md) · [sheets](./examples/docupuncture-sheets/SKILL_FACTS.md) · [slides](./examples/docupuncture-slides/SKILL_FACTS.md) |
