@@ -20,6 +20,8 @@
 
 SkillFacts labels what instructions *teach*; AgentFacts labels what the host *allows*.
 
+Catalyst Forge dogfood (see `dogfood: true` in the catalog): forgetrail, smellcheck, ember-dossier, TemperPass passes, DocuPuncture skills. One file per skill package.
+
 ## Spec (git)
 
 - https://github.com/Catalyst-Forge-LLC/skill-facts/blob/main/SPEC.md
