@@ -94,7 +94,7 @@ Bootstrap intent preserved in [`GENESIS.md`](./GENESIS.md). Session plan:
 
 ## Website
 
-Cloudflare Pages root = `site`, no build.
+The static site for [skillfacts.dev](https://skillfacts.dev) lives in [`site/`](./site/). Publish with `pnpm ship` (Wrangler Pages project `skill-facts`, no build step). Git-connected Pages can also use project root `site`.
 
 | Path | Purpose |
 |---|---|
