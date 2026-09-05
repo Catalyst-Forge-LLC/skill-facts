@@ -1,0 +1,13 @@
+{
+  "name": "skill-facts",
+  "private": true,
+  "scripts": {
+    "ship": "wrangler pages deploy site --project-name=skill-facts"
+  },
+  "devDependencies": {
+    "wrangler": "^4.28.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "workerd"]
+  }
+}
