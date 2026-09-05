@@ -94,7 +94,7 @@ Bootstrap intent preserved in [`GENESIS.md`](./GENESIS.md). Session plan:
 
 ## Website
 
-The static site for [skillfacts.dev](https://skillfacts.dev) lives in [`site/`](./site/). Publish with `pnpm ship` (Wrangler Pages project `skill-facts`, no build step). Git-connected Pages can also use project root `site`.
+The static site for [skillfacts.dev](https://skillfacts.dev) lives in [`site/`](./site/). Publish with `pnpm ship` (Wrangler Worker `skill-facts`, uploads `site/` as static assets, no build step).
 
 | Path | Purpose |
 |---|---|
