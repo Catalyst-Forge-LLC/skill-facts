@@ -155,6 +155,13 @@ Suite contract: [x-facts `DISCOVERY-AND-PUBLICATION.md`](../x-facts/specs/DISCOV
 | **0.1.1** | Publication & discovery: marketplace/install pointers; URL-preferred tool refs; link to suite discovery contract. |
 | **0.1.0** | Initial specification, formalizing [`GENESIS.md`](./GENESIS.md). |
 
+## Compatible proposal (not implemented)
+
+An optional digest over `SKILL.md` plus each `bundled_artifacts[].path` would bind
+the label to packaged bytes. It must define path order, hashing, and exclusion of
+mutable remote URLs. External references stay listed, not covered by the digest.
+Do not treat this paragraph as an approved schema field.
+
 ## License
 
 CC0 - public domain. No attribution required.

@@ -18,9 +18,14 @@
 3. Prefer harsher reach labels when unsure. Follow ToolFacts links for named tools.
 4. Validate frontmatter against the schema.
 
-SkillFacts labels what instructions *teach*; AgentFacts labels what the host *allows*.
+SkillFacts labels what instructions teach. ToolFacts labels what a named tool does when invoked. AgentFacts labels what the host allows. Instructions do not grant permissions.
+
+Bind a review to `version`, `provenance.source`, `generated.date`, and `bundled_artifacts`. There is no package digest in the current schema.
+
+Docs Writer instructs reading existing docs and returning proposed text. It does not instruct repository writes.
 
 Catalyst Forge dogfood (see `dogfood: true` in the catalog): forgetrail, smellcheck, ember-dossier, TemperPass passes, DocuPuncture skills. One file per skill package.
+ForgeTrail runAudit returns a packaged audit prompt and does not scan the user workspace.
 
 ## Spec (git)
 

@@ -38,8 +38,11 @@ credits:
 | **License** | Apache-2.0 |
 | **Kind** | cursor-skill |
 
-*Safe baseline: instructions-only, read existing docs for voice, no shell/network,
-no bundled scripts.*
+*Illustrative baseline, not marketplace certification. Instructions-only: read
+existing docs for voice and return proposed text. No instructed repository
+write, no shell, no network, no bundled scripts. A later human or host may
+apply the draft. Reviewing this label does not review mutable external URLs,
+because none are referenced.*
 
 ## Purpose
 
