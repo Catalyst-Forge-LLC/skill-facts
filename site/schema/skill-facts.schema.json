@@ -118,6 +118,20 @@
       },
       "additionalProperties": false
     },
+    "reviewed": {
+      "type": "object",
+      "description": "Optional human review stamp. Presence is not certification. A package digest stays a later proposal until canonicalization is defined.",
+      "required": ["date", "by", "status"],
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "by": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["publisher-authored", "independently-reviewed", "stale"]
+        }
+      },
+      "additionalProperties": false
+    },
     "credits": {
       "type": "object",
       "properties": {
