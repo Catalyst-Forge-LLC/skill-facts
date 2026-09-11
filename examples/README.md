@@ -2,7 +2,7 @@
 
 | Slug | Kind | Shell | Network | FS |
 |---|---|---|---|---|
-| [docs-writer](./docs-writer/SKILL_FACTS.md) | cursor-skill | none | none | read (return proposed text) |
+| [docs-writer](./docs-writer/SKILL_FACTS.md) | cursor-skill | none | none | read |
 | [repo-setup](./repo-setup/SKILL_FACTS.md) | claude-skill | explicit | explicit | read-write |
 | [web-research](./web-research/SKILL_FACTS.md) | agents-skill | none | explicit | read-write |
 | [secure-review](./secure-review/SKILL_FACTS.md) | cursor-skill | implied | none | read |

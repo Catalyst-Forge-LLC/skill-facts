@@ -28,11 +28,7 @@ labels the **brain**. [ToolFacts](https://toolfacts.dev) labels the **toolbelt**
 
 **Boundary:** SkillFacts is about what instructions *teach* (and imply). ToolFacts is
 about what an instrument *does when invoked*. AgentFacts is about what an actor
-*configuration permits*. Instructions do not grant host permissions.
-
-Identify a reviewed package with `version`, `provenance.source`, `generated.date`,
-and `bundled_artifacts`. Reviewing `SKILL.md` does not review mutable external URLs
-or unlisted files. There is no package digest in the current schema.
+*configuration permits*.
 
 **The Golden Rule:** objective facts only. "Great productivity skill" is README talk.
 "Instructs the agent to run `curl` against an external host" is a fact. Prefer
@@ -42,7 +38,7 @@ or unlisted files. There is no package digest in the current schema.
 
 | Slug | Kind | Shell | Network | FS |
 |---|---|---|---|---|
-| [docs-writer](./examples/docs-writer/SKILL_FACTS.md) | cursor-skill | none | none | read (return proposed text, no instructed write) |
+| [docs-writer](./examples/docs-writer/SKILL_FACTS.md) | cursor-skill | none | none | read |
 | [repo-setup](./examples/repo-setup/SKILL_FACTS.md) | claude-skill | explicit | explicit | read-write |
 | [web-research](./examples/web-research/SKILL_FACTS.md) | agents-skill | none | explicit | read-write |
 | [secure-review](./examples/secure-review/SKILL_FACTS.md) | cursor-skill | implied | none | read |
