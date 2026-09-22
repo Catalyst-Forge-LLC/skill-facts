@@ -118,7 +118,7 @@ Empty array when the skill is instructions-only.
 ## Conventions
 
 - Objective facts only (Golden Rule).
-- `undisclosed` over omission - especially provenance and egress destinations.
+- `undisclosed` over omission, especially provenance and egress destinations. `undisclosed` records absence, not intent.
 - Closed enums for judgment fields so skills compare.
 - One `SKILL_FACTS.md` per skill *version*. Material instruction or artifact changes
   mean a new file.
