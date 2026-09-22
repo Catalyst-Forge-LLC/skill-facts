@@ -395,6 +395,7 @@
     .xfacts-family-footer .xfacts-footer-nav a[data-label="model"] { color: #ab93f5; }
     .xfacts-family-footer .xfacts-footer-nav a[data-label="tool"] { color: #5eead4; }
     .xfacts-family-footer .xfacts-footer-nav a[data-label="agent"] { color: #fbd38d; }
+    .xfacts-family-footer .xfacts-footer-nav a[data-label="feature"] { color: #c4d06a; }
     .xfacts-family-footer .xfacts-footer-nav a:hover { color: #fff; }
     .xfacts-family-footer .xfacts-footer-credit {
       display: flex;
@@ -466,6 +467,8 @@
           <a href="https://agentfacts.dev">AgentFacts</a> labels the <strong>hands</strong>.
           SkillFacts labels the <strong>playbook</strong>: what installable instructions
           will teach an agent to do, in a file you can validate, diff, and review before install.
+          <a href="https://featurefacts.dev">FeatureFacts</a> labels the <strong>terrain</strong>:
+          what the product can do, and which of those capabilities are still only candidates.
         </p>
         <p>
           <strong>The boundary:</strong> ToolFacts labels an executable instrument.
@@ -607,8 +610,9 @@ pnpm validate path/to/SKILL_FACTS.md</pre>
             Part of the <a href="https://xfacts.dev">xFacts</a> suite with
             <a href="https://appfacts.dev">AppFacts</a>,
             <a href="https://modelfacts.dev">ModelFacts</a>,
-            <a href="https://toolfacts.dev">ToolFacts</a>, and
-            <a href="https://agentfacts.dev">AgentFacts</a>.
+            <a href="https://toolfacts.dev">ToolFacts</a>,
+            <a href="https://agentfacts.dev">AgentFacts</a>, and
+            <a href="https://featurefacts.dev">FeatureFacts</a>.
             Spec &amp; schema are <strong>CC0</strong> (public domain). Tooling is
             <strong>MIT</strong>. Adopt freely; a link back is appreciated but not required.
           </p>
@@ -626,6 +630,7 @@ pnpm validate path/to/SKILL_FACTS.md</pre>
         <li><a data-label="tool" href="https://toolfacts.dev">ToolFacts</a></li>
         <li><a data-label="agent" href="https://agentfacts.dev">AgentFacts</a></li>
         <li><span class="current" data-label="skill">SkillFacts</span></li>
+        <li><a data-label="feature" href="https://featurefacts.dev">FeatureFacts</a></li>
       </ul>
       <div class="xfacts-footer-credit">
         <div>© 2026 SkillFacts</div>

@@ -25,6 +25,7 @@
 labels the **brain**. [ToolFacts](https://toolfacts.dev) labels the **toolbelt**.
 [AgentFacts](https://agentfacts.dev) labels the **hands**. **SkillFacts** labels the
 **playbook**: installable instructions (`SKILL.md` and kin) that steer an agent.
+[FeatureFacts](https://featurefacts.dev) labels the **terrain**: what the product can do.
 
 **Boundary:** SkillFacts is about what instructions *teach* (and imply). ToolFacts is
 about what an instrument *does when invoked*. AgentFacts is about what an actor
