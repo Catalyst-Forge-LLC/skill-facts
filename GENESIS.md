@@ -70,7 +70,7 @@ what a skill invokes, and the marketplace adoption moment is still maturing.
   body-vs-frontmatter.
 - **The Golden Rule:** objective facts only. "Great productivity skill" is README
   talk. "Instructs the agent to run `curl` against an external host" is a fact.
-- **`undisclosed` over omission** for knowingly withheld facts.
+- **`undisclosed` over omission** for facts that are not disclosed.
 - **Closed enums for judgment fields** so files are comparable across skills.
 - **Licensing:** spec & schema CC0, tooling MIT.
 - **Design:** AppFacts design system with a distinct accent. Suggested rose/pink

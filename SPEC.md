@@ -86,7 +86,7 @@ Guidance:
 | `implied` | Soft guidance ("you may need to…") without a concrete command/URL |
 | `explicit` | Concrete shell fragments, URLs, or API calls in the skill or scripts |
 | `read` / `read-write` | Filesystem: clear read-only vs mutate intent |
-| `undisclosed` | Publisher withholds or packaging obscures the answer |
+| `undisclosed` | The publisher does not disclose it, or packaging obscures the answer |
 
 Prefer the harsher label when unsure.
 
