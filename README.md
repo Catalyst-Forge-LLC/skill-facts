@@ -114,3 +114,5 @@ The static site for [skillfacts.dev](https://skillfacts.dev) lives in [`site/`](
 <p align="center">
   <em>"Know what it will teach before you install it."</em>
 </p>
+
+[See the rest of the Catalyst Forge shelf.](https://catalystforge.com/tools/)
