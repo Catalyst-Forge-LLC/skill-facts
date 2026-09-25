@@ -70,8 +70,11 @@ Shelf dogfood (one row per skill package; a product may ship several):
 
 ## Validating a file
 
+Clone the repository, then validate. There is no published CLI.
+
 ```bash
-cd validator
+git clone https://github.com/Catalyst-Forge-LLC/skill-facts
+cd skill-facts/validator
 pnpm install
 pnpm validate ../examples/docs-writer/SKILL_FACTS.md
 pnpm validate ../examples/*/SKILL_FACTS.md ../examples/SKILL_FACTS.template.md
@@ -79,8 +82,17 @@ pnpm validate ../examples/*/SKILL_FACTS.md ../examples/SKILL_FACTS.template.md
 
 ## Generating a label
 
-Planned: parse skill text + scan bundled scripts (reuse ToolFacts heuristics). Not
-shipped yet. See [`generator/README.md`](./generator/README.md).
+A limited helper can draft missing labels from `SKILL.md` and package metadata. It does not overwrite an existing file, does not call a model, and does not analyze bundled scripts. Reach values are keyword guesses. Review every generated field before publishing.
+
+```bash
+git clone https://github.com/Catalyst-Forge-LLC/skill-facts
+cd skill-facts
+node scripts/generate_skill_facts.mjs /path/to/repo
+```
+
+The full instruction-and-script analysis generator is planned. See [`generator/README.md`](./generator/README.md). Do not treat that plan as an install recipe.
+
+Copy [`examples/SKILL_FACTS.template.md`](./examples/SKILL_FACTS.template.md) when you want to author the label by hand, then validate with the commands above.
 
 ## Roadmap
 
