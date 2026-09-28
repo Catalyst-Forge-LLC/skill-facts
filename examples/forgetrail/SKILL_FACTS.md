@@ -6,7 +6,7 @@ version: "0.3.0"
 status: active
 license: Apache-2.0
 kind: cursor-skill
-purpose: "Enforce the ForgeTrail 7-phase lifecycle and maintain .forgetrail/workflow_tracking.json as the system of record"
+purpose: "Enforce the ForgeTrail 7-phase lifecycle and maintain appledger/ as the system of record"
 homepage: https://forgetrail.dev
 repository: https://github.com/Catalyst-Forge-LLC/forgetrail
 provenance:
@@ -19,6 +19,7 @@ instructions_reach:
 tools_referenced:
   - https://github.com/Catalyst-Forge-LLC/forgetrail/blob/main/mcp-server/TOOL_FACTS.md
   - getPhaseGuidance
+  - getCompanionSuggestions
   - runAudit
   - searchLessons
   - validateTracking
@@ -32,7 +33,7 @@ egress:
   telemetry: none
   destinations: []
 generated:
-  date: 2026-08-20
+  date: 2026-09-26
   generator: hand-authored
 credits:
   generated_with: https://skillfacts.dev
@@ -53,7 +54,7 @@ credits:
 
 ## Purpose
 
-Enforce the ForgeTrail 7-phase lifecycle and maintain .forgetrail/workflow_tracking.json as the system of record
+Enforce the ForgeTrail 7-phase lifecycle and maintain appledger/ as the system of record
 
 ## Provenance
 
@@ -95,3 +96,5 @@ Enforce the ForgeTrail 7-phase lifecycle and maintain .forgetrail/workflow_track
 
 ---
 *Generated with [SkillFacts](https://skillfacts.dev) · Built by [Catalyst Forge](https://www.catalystforge.com/)*
+
+[skillfacts-label]: https://skillfacts.dev/v#sf1.eNqdk0-L2zAQxb-K0Tm2t-2hkFtIu6U0dJcmt6UEWR7b2uiPkUZJw7LfvU8yZXehl_ZgsEdPM29-M34SZ7F-txJOWhJrMfgwEgepjViJns5k_EwBB1vJ0lwjV7dZgcMzhai9w9FN86G5QSSy5BQRkIr1OWuMVuRizruZpZqofl-EJ-16xFQK0Yc6nrTJ1eYUZl_Enx1sKKp4oqXcIRuqPtbzJCNVRg-krspQJV1fWakd46maF-_txYfTYPzliE-FcmPzGL2rZCw5I_ogW_mhCqR86HPx4M_kpFOo_ySiTyG_iYl5juu2HTVPqWuUt-0fEHVxVu922_YNtDl1Rsfpb9CeV0K7yCGBj3fxGAhQSr2JgGAt6NcMZJqRxhHnJhDUFkHKJgdtaPGOMC739SVoLnnZe5MTDhQITQDvwz-bbzvjuzbzbK2a60gBM24Pd3e74-1me9g3NpuA-D6P4UvSfeG1EiG5TeqL7UgyqGlHEbhj3hJpIOM8wTKHLEnjSJH3qZMjOf6EEVgMXmcmS_4DoWVcWr6-0-U--EdS_E2rkx-GJfyDYrK0RyXc-_oKq_i5El1yvaH-KAPrAeuIrXxAmMYAfSbOZMii7StIOu-obHtk7eSSA3JQnbylGS5fbcILrga_R26einlfUv3HvsC3U2gWI8MrPf8GOlRERg
