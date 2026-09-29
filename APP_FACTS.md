@@ -1,6 +1,6 @@
 ---
 app_facts_version: 0.1.0
-name: skill-facts
+name: SkillFacts
 type: library
 status: active
 license: MIT
@@ -21,7 +21,7 @@ credits:
   built_by: "Catalyst Forge — https://www.catalystforge.com/"
 ---
 
-# skill-facts
+# SkillFacts
 
 `library` · **active** · MIT
 
@@ -50,4 +50,4 @@ _None listed_
 ---
 *Generated with [AppFacts](https://appfacts.dev) · Built by [Catalyst Forge](https://www.catalystforge.com/) · [Visual label][appfacts-label]*
 
-[appfacts-label]: https://appfacts.dev/v#af1.eNpNj8FqwzAQRP9lznJMr7oGCi1JL80thLKWFWVrWRLalcGE_Htxesl15jGPuWOBfTNINHtYyMQxdldyKjDQtWxh5KFSXWEgStoEFuSUFw-DyM4n2ajjx-mfcBPsHZFSaBS25pMW-naVi8KgtqT8dH3l0e9-n56cI6cAi5LKjIfB6IvAni8GQ-M4boOF3ETB_8yUKPj6AldfsrDmusLiplrE9n1gvbVh5_Lc70kprqLde67Bd4fDvn_9-fgDpolXyQ
+[appfacts-label]: https://appfacts.dev/v#af1.eNpNj8FqwzAQRP9lznJMr7oGAilpLumtlLKWFWVjWRLSymBC_j3IveQ685jHPLBAfygEmi00LhN7fyAjBQqyppZ5HjLlFQpFSGqBBhnhxULBs7GhNOrr-P1PmAn6AU_BVXKt-aSFLiZzEijkGoQ31TmOdnffPDF6Dg4aKaQZT4XRpgL986swVPZjG0xkJnL2b6ZAzuY3ONsUC0vMKzRuIqnovncstzrsTJz7PQn5tUh3iNnZ7nTa96Xd7K7bz-cLOcxXXA

@@ -8,6 +8,7 @@
  *   node generate_skill_facts.mjs /path/to/repo --plan
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { productTitle, skillLabelName } from '../../app-facts/generator/product_title.js';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -165,12 +166,15 @@ function bundledArtifacts(skillMd) {
 
 /**
  * Label heading. A lowercase slug stays an id in SKILL.md. The facts name uses
- * the product spelling when package.json's description starts with it
- * ("AppLedger:"), and otherwise title-cases the slug ("cold-eye" → "Cold-Eye").
+ * the product title when the slug is that product, then a package.json
+ * description that starts with the spelling ("AppLedger:"), and otherwise
+ * title-cases the slug ("cold-eye" → "Cold-Eye").
  */
-export function labelTitle(slug, pkg) {
+export function labelTitle(slug, pkg, product = '') {
 	const name = String(slug || '').trim();
 	if (!name) return 'Skill';
+	const titled = product ? skillLabelName(name, product) : name;
+	if (titled !== name) return titled;
 	if (/[A-Z]/.test(name)) return name;
 	const described = String(pkg?.description || '').trim();
 	const lead = /^([A-Za-z][A-Za-z0-9]*)\s*:/.exec(described);
@@ -194,7 +198,7 @@ export function renderSkillFacts({ skillMd, root, pkg }) {
 	const md = readFileSync(skillMd, 'utf8');
 	const fm = parseSkillFrontmatter(md);
 	const parent = dirname(skillMd).replace(/\\/g, '/').split('/').pop();
-	const name = labelTitle(fm.name || parent || 'skill', pkg);
+	const name = labelTitle(fm.name || parent || 'skill', pkg, productTitle(root));
 	const developer = developerFrom(pkg);
 	const version = String(pkg?.version || fm.version || '0.0.0');
 	const license = String(pkg?.license || fm.license || 'undisclosed');

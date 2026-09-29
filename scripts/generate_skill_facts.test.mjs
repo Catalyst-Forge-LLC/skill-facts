@@ -71,6 +71,10 @@ Write to: one file. Run \`npm pack --dry-run\`.
 		assert.match(rendered, /# Skill Facts - Cold-Eye/);
 		assert.equal(labelTitle('appledger', { description: 'AppLedger: an open text record.' }), 'AppLedger');
 		assert.equal(labelTitle('cold-eye', {}), 'Cold-Eye');
+		assert.equal(labelTitle('cold-eye', {}, 'Cold-eye'), 'Cold-eye');
+		assert.equal(labelTitle('ember-dossier', {}, 'EmberDossier'), 'EmberDossier');
+		assert.equal(labelTitle('detangler-app', {}, 'Detangler'), 'Detangler App');
+		assert.equal(labelTitle('clarify-first', {}, 'TemperPass'), 'Clarify First');
 		assert.match(rendered, /kind: cursor-skill/);
 		assert.match(rendered, /filesystem: read-write/);
 		assert.match(rendered, /shell: explicit/);
