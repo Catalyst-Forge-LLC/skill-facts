@@ -21,9 +21,9 @@ if (command === "--version" || command === "-v") {
 }
 if (command === "validate") {
   process.argv = [process.argv[0], process.argv[1], ...rest];
-  await import("../src/validate.ts");
+  await import("../dist/validate.js");
 } else if (command === "encode-viewer") {
-  await import("../src/encode-viewer.ts");
+  await import("../dist/encode-viewer.js");
 } else {
   console.error(usage);
   process.exit(2);

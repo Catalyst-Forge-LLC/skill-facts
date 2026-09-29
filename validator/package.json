@@ -1,13 +1,14 @@
 {
   "name": "@xfacts/skillfacts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Validate SKILL_FACTS.md frontmatter against the SkillFacts JSON Schema.",
   "type": "module",
   "scripts": {
     "validate": "node bin/skillfacts.mjs validate",
     "typecheck": "tsc --noEmit",
     "encode-viewer": "node bin/skillfacts.mjs encode-viewer",
-    "prepack": "node scripts/stage-schema.mjs skill-facts.schema.json"
+    "build": "node scripts/build.mjs src/validate.ts src/encode-viewer.ts",
+    "prepack": "pnpm build && node scripts/stage-schema.mjs skill-facts.schema.json"
   },
   "dependencies": {
     "ajv": "^8.17.1",
@@ -16,13 +17,15 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "esbuild": "^0.28.2",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   },
   "pnpm": {
     "overrides": {
       "fast-uri": "3.1.7"
-    }
+    },
+    "onlyBuiltDependencies": ["esbuild"]
   },
   "license": "MIT",
   "bin": {
@@ -30,7 +33,7 @@
   },
   "files": [
     "bin",
-    "src",
+    "dist",
     "schema",
     "scripts/stage-schema.mjs",
     "README.md",

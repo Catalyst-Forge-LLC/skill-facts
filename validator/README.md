@@ -3,7 +3,7 @@
 Validates `SKILL_FACTS.md` YAML frontmatter against
 [`../site/schema/skill-facts.schema.json`](../site/schema/skill-facts.schema.json).
 
-The command is `skillfacts validate <file>` from `@xfacts/skillfacts` (Node 22.18 or newer). In this repository, `pnpm validate` runs the same program.
+The command is `skillfacts validate <file>` from `@xfacts/skillfacts` (Node 22.18 or newer). The published command is compiled JavaScript. In this repository, `pnpm validate` runs the same program.
 
 ```bash
 pnpm install
