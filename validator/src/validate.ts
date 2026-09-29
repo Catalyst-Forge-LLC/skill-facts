@@ -3,9 +3,9 @@
  * Validate SKILL_FACTS.md frontmatter against the canonical SkillFacts JSON Schema.
  *
  * Usage:
- *   pnpm validate <path/to/SKILL_FACTS.md> [more files...]
+ *   skillfacts validate <path/to/SKILL_FACTS.md> [more files...]
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Ajv } from "ajv";
@@ -13,7 +13,8 @@ import addFormats from "ajv-formats";
 import { parse as parseYaml } from "yaml";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const schemaPath = resolve(here, "../../site/schema/skill-facts.schema.json");
+const packagedSchema = resolve(here, "../schema/skill-facts.schema.json");
+const schemaPath = existsSync(packagedSchema) ? packagedSchema : resolve(here, "../../site/schema/skill-facts.schema.json");
 const schema = JSON.parse(readFileSync(schemaPath, "utf8"));
 
 const ajv = new Ajv({ allErrors: true, strict: false });
@@ -27,7 +28,7 @@ function extractFrontmatter(markdown: string): string | null {
 
 const files = process.argv.slice(2);
 if (files.length === 0) {
-  console.error("Usage: pnpm validate <path/to/SKILL_FACTS.md> [more files...]");
+  console.error("Usage: skillfacts validate <path/to/SKILL_FACTS.md> [more files...]");
   process.exit(2);
 }
 

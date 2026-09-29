@@ -4,3 +4,7 @@ dist/
 *.log
 .DS_Store
 .wrangler/
+
+# Schema copied by prepack for the published package.
+validator/schema/
+validator/LICENSE
