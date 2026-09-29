@@ -575,11 +575,7 @@ generated:
           is planned. Review every generated field before publishing.
         </p>
         <div class="split">
-          <pre># validate any SKILL_FACTS.md (CI-friendly exit codes)
-cd skill-facts/validator &amp;&amp; pnpm install
-pnpm validate ../examples/docs-writer/SKILL_FACTS.md
-pnpm validate ../examples/*/SKILL_FACTS.md
-pnpm validate path/to/SKILL_FACTS.md</pre>
+          <pre>npx @xfacts/skillfacts validate path/to/SKILL_FACTS.md</pre>
           <div class="prose">
             <p>
               Frontmatter is checked against

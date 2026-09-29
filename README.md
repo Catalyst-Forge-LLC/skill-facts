@@ -70,14 +70,10 @@ Shelf dogfood (one row per skill package; a product may ship several):
 
 ## Validating a file
 
-Clone the repository, then validate. There is no published CLI.
+Install `@xfacts/skillfacts` (Node 22.18 or newer).
 
 ```bash
-git clone https://github.com/Catalyst-Forge-LLC/skill-facts
-cd skill-facts/validator
-pnpm install
-pnpm validate ../examples/docs-writer/SKILL_FACTS.md
-pnpm validate ../examples/*/SKILL_FACTS.md ../examples/SKILL_FACTS.template.md
+npx @xfacts/skillfacts validate path/to/SKILL_FACTS.md
 ```
 
 ## Generating a label
