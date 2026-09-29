@@ -163,6 +163,26 @@ function bundledArtifacts(skillMd) {
 	return out.slice(0, 24);
 }
 
+/**
+ * Label heading. A lowercase slug stays an id in SKILL.md. The facts name uses
+ * the product spelling when package.json's description starts with it
+ * ("AppLedger:"), and otherwise title-cases the slug ("cold-eye" → "Cold-Eye").
+ */
+export function labelTitle(slug, pkg) {
+	const name = String(slug || '').trim();
+	if (!name) return 'Skill';
+	if (/[A-Z]/.test(name)) return name;
+	const described = String(pkg?.description || '').trim();
+	const lead = /^([A-Za-z][A-Za-z0-9]*)\s*:/.exec(described);
+	const fold = (value) => value.toLowerCase().replace(/[-_\s]/g, '');
+	if (lead && fold(lead[1]) === fold(name)) return lead[1];
+	return name
+		.split(/[-_\s]+/)
+		.filter(Boolean)
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(name.includes('-') ? '-' : ' ');
+}
+
 function purposeFrom(fm, md) {
 	const raw = (fm.purpose || fm.description || '').replace(/\s+/g, ' ').trim();
 	if (raw) return raw.split(/(?<=\.)\s/)[0].slice(0, 200);
@@ -174,7 +194,7 @@ export function renderSkillFacts({ skillMd, root, pkg }) {
 	const md = readFileSync(skillMd, 'utf8');
 	const fm = parseSkillFrontmatter(md);
 	const parent = dirname(skillMd).replace(/\\/g, '/').split('/').pop();
-	const name = (fm.name || parent || 'skill').trim();
+	const name = labelTitle(fm.name || parent || 'skill', pkg);
 	const developer = developerFrom(pkg);
 	const version = String(pkg?.version || fm.version || '0.0.0');
 	const license = String(pkg?.license || fm.license || 'undisclosed');

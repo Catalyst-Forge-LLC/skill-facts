@@ -7,6 +7,7 @@ import {
 	listSkillPacks,
 	missingSkillFacts,
 	parseSkillFrontmatter,
+	labelTitle,
 	renderSkillFacts,
 	writeMissingSkillFacts,
 } from './generate_skill_facts.mjs';
@@ -66,7 +67,10 @@ Write to: one file. Run \`npm pack --dry-run\`.
 			root,
 			pkg: JSON.parse('{"version":"0.1.4","license":"MIT","author":"Catalyst Forge LLC","homepage":"https://coldeye.dev","repository":{"url":"git+https://github.com/Catalyst-Forge-LLC/coldeye.git"}}'),
 		});
-		assert.match(rendered, /name: cold-eye/);
+		assert.match(rendered, /name: Cold-Eye/);
+		assert.match(rendered, /# Skill Facts - Cold-Eye/);
+		assert.equal(labelTitle('appledger', { description: 'AppLedger: an open text record.' }), 'AppLedger');
+		assert.equal(labelTitle('cold-eye', {}), 'Cold-Eye');
 		assert.match(rendered, /kind: cursor-skill/);
 		assert.match(rendered, /filesystem: read-write/);
 		assert.match(rendered, /shell: explicit/);
