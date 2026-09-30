@@ -15,7 +15,7 @@ provenance:
 instructions_reach:
   shell: none
   network: implied
-  filesystem: read
+  filesystem: read-write
 tools_referenced:
   []
 bundled_artifacts:
@@ -81,7 +81,7 @@ Editorial rules for publishable prose; spray, audit, and publish-pass workflows 
 |---|---|
 | Shell | none |
 | Network | implied |
-| Filesystem | read |
+| Filesystem | read-write |
 
 ## Tools referenced
 
@@ -113,4 +113,4 @@ Editorial rules for publishable prose; spray, audit, and publish-pass workflows 
 ---
 *Generated with [SkillFacts](https://skillfacts.dev) · Built by [Catalyst Forge](https://www.catalystforge.com/)*
 
-[skillfacts-label]: https://skillfacts.dev/v#sf1.eNqdk8FqGzEQhl9lmbNspz2qpxJaMHFP7S2EMJbGu8JaScyM1izG7160beoWclh60-HTP9KnX1eYwH4wkHAksCAjxegGcmcw4GmimAsxWHhExTiLdl8z9wQGJmIJOYGFh-3H7QMYEEWtAhbQaZgaE4OjJC332_4HGDiH5MGCqyyZN3IOMYKBUrnkhfrig2YOGDuukaQ7Ze5KPcYgAx4jdYWz0KdOCuNsOqw-qOkw-TdoU1Cku2Q-n2K-_Nr_eb9BkSBKvrtw0JD6NpPzRAmTI7BXkFy5rWBQLWJ3uz7oUI9bl8fd28U3y8U3h8Pj7h9Jv0e_J-lmICRRrk5DTvLKhG5Y5g0UI1hIOTVNibSdGSyEscRAHgycQiSZRWkEC0zoW5rmHFvMiZiSIw_2-cXAsSYfyb8iazihUwH7fIWCOoCF70_7w2E7-rv9rO2wN_MHWVzvXGZawy3WVwVGDKOsIUkE51VkxORD6teguerie11sTetIF6bgVmly6Gl8n30xQD2TSOuCUqSRlOd7HzyJhoRLadoT3wwMeaSC_d8dvbdw62kCA0wlS_tA8_81Wbkmh9pqpVzp9hMhlmnP
+[skillfacts-label]: https://skillfacts.dev/v#sf1.eJydk0GLGzEMhf_KoLMn2fbonsrSQtj01N6WZVFsJWPisY0kTxhC_nvxtNu0sIehNx8-P0lPT1eYwH4wkHAksCAjxegGcmcw4GmimAsxWHhExTiLdl8znwgMTMQScgILD5uPmwcwIIpaBSyg0zA1JgZHSZrut90PMHAOyYMFV1ky93IOMYKBUrnkhfrig2YOGDuukaQ7Zu5KPcQgAx4idYWz0KdOCuNsOqw-qOkw-TeoLyjSXTKfjzFffv3_vOtRJIiS7y4cNKRTq8l5ooTJEdgrSK7cXjCoFrHb7SnoUA8bl8ft2-D9Mni_3z9u_zHpd-n3TLoZCEmUq9OQk7wyoRuWegPFCBZSTs2mRNp6BgthLDGQBwPHEElmURrBAhP6vjW_aGrOsYkdiSk58mCfXwwcavKR_CuyhiM6FbDPVyioA1j4_rTb7zejv-8ga2v5Zv4gi-Nbl5nWcIv3qwQjhlHWkCSC8yoyYvIhndagueri-jrZmtaRLkzBrbLJoafxffbFAJ2YRFoilCKNpDzfU-FJNCRcotNWfDMw5JEKnv5O6j2LG08TGGAqWdoZzf-XZ-WaHGqLlXKl209avmwn
