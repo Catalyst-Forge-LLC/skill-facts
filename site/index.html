@@ -413,23 +413,28 @@
         transition: none !important;
       }
     }
-  </style>
+
+/* Shared reading rhythm, with each family's accent and label retained. */
+.hero .brand {font-size:1.25rem;letter-spacing:-.03em;margin:0 0 1rem;line-height:1.3}
+.hero h1.lede {font-size:clamp(2rem,4.2vw,3.4rem);font-weight:650;line-height:1.12;letter-spacing:-.035em;max-width:19ch;text-wrap:balance;margin:0 0 1.25rem}
+.hero .sub {font-size:1.0625rem;line-height:1.65;max-width:58ch}
+.hero .entry-limit {font-size:.875rem;line-height:1.6;max-width:58ch;margin:1rem 0;color:var(--muted,inherit)}
+.hero .entry-kind {font-size:.875rem;line-height:1.5;margin:0 0 1rem}
+.hero .cta {display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.hero .cta a {display:inline-flex;align-items:center;min-height:44px;padding:.7rem 1rem;font-size:1rem}
+.hero :is(a,button):focus-visible {outline:3px solid currentColor;outline-offset:4px}
+.hero .label-plane {min-width:0;max-width:100%}
+@media(max-width:760px){.hero h1.lede{font-size:2.25rem}.hero .brand{font-size:1.125rem}.hero .cta a{max-width:100%;white-space:normal}.hero{overflow-wrap:anywhere}}
+
+</style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap hero-copy">
-      <h1 class="brand">Skill<span>Facts</span></h1>
-      <p class="lede">Know what it will teach before you install it. Part of the <a href="https://xfacts.dev">xFacts</a> suite.</p>
-      <p class="sub">
-        A tiny <code>SKILL_FACTS.md</code> for the playbook layer: what an installable
-        agent skill will teach an agent to do, and what shell, network, and filesystem
-        reach those instructions imply.
-      </p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/Catalyst-Forge-LLC/skill-facts">View on GitHub</a>
-        <a class="btn btn-ghost" href="https://github.com/Catalyst-Forge-LLC/skill-facts/blob/main/SPEC.md">Read the spec</a>
-        <a class="btn btn-ghost" href="#write">Validate one</a>
-      </div>
+      <p class="brand">Skill<span>Facts</span></p>
+      <p class="entry-kind">Open label format · part of <a href="https://xfacts.dev">xFacts</a></p><h1 class="lede">What will this skill ask your agent to do?</h1>
+      <p class="sub">Before installing a skill, inspect its purpose, bundled files, and the shell, network, and filesystem reach its instructions imply. SkillFacts keeps that explanation beside the skill itself.</p>
+      <div class="cta"><a class="btn btn-primary" href="#examples">Read example labels</a><a class="btn btn-ghost" href="#write">Create or validate a label</a></div><p class="entry-limit">A label describes the instructions. It does not grant access or guarantee the agent will follow them.</p>
     </div>
 
     <div class="label-plane" aria-label="Example Skill Facts label">
