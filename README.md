@@ -21,6 +21,8 @@
 
 ## What is this?
 
+Read a skill's purpose, required tools, bundled artifacts, and instructed side effects before installing it. For example, [Docs Writer](examples/docs-writer/SKILL_FACTS.md) declares no shell or network use and read-only filesystem access. [Repo Setup](examples/repo-setup/SKILL_FACTS.md) declares explicit shell and network use plus read-write access. That difference helps you choose an appropriate skill and inspect the corresponding instructions. The label does not grant permissions or prove that the host enforces them.
+
 [AppFacts](https://appfacts.dev) labels the **body**. [ModelFacts](https://modelfacts.dev)
 labels the **brain**. [ToolFacts](https://toolfacts.dev) labels the **toolbelt**.
 [AgentFacts](https://agentfacts.dev) labels the **hands**. **SkillFacts** labels the
